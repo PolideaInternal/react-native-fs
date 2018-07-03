@@ -310,6 +310,7 @@ RCT_EXPORT_METHOD(read:(NSString *)filepath
     }
 
     NSString *base64Content = [content base64EncodedStringWithOptions:NSDataBase64EncodingEndLineWithLineFeed];
+    [file closeFile];
 
     resolve(base64Content);
 }
